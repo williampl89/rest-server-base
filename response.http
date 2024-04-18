@@ -2,6 +2,9 @@
 GET http://localhost:8080/api/usuarios HTTP/1.1
 
 ###
+GET http://localhost:8080/api/usuarios?limite=5&desde=10 HTTP/1.1
+
+###
 GET http://localhost:8080/api/usuarios?q=hola&nombre=William&apikey=432432432&page=20  HTTP/1.1
 
 
@@ -10,15 +13,41 @@ POST http://localhost:8080/api/usuarios HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre": "Francis Favia 88",
-    "edad": 33
+    "nombre": "William DavilaUser 20",
+    "google": true,
+    "correo": "usernica20@yahoo.es",
+    "password": "1234567",
+    "rol": "ADMIN_ROLE"
+
 }
 
+ 
 ###
-PUT http://localhost:8080/api/usuarios/12323 HTTP/1.1
+PUT http://localhost:8080/api/usuarios/6614703017982f43c7439fca HTTP/1.1
 Content-Type: application/json
 
 {
-    "nombre": "Francis Favia 88",
-    "edad": 33
+    "nombre": "Francisita Davila",
+    "google": true,
+    "correo": "test33ewesda111@yahoo.es",
+    "password": "1234567",
+    "rol": "ADMIN_ROLE"
+}
+
+
+###
+DELETE http://localhost:8080/api/usuarios/6614703017982f43c7439fca HTTP/1.1
+
+###
+DELETE http://localhost:8080/api/usuarios/66206ba6e3c2bc3665d76106 HTTP/1.1
+x-token:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NjIwNzI5YzhlZjQzNzU3M2QzOTlhNDIiLCJpYXQiOjE3MTM0MTM2NDQsImV4cCI6MTcxMzQyODA0NH0.gUMftz5zd5VqTFL-9YJnGSpAdqUc4wDyT4ZK1BZQhKI
+ 
+###
+POST http://localhost:8080/api/auth/login HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "correo": "usernica20@yahoo.es",
+    "password": "1234567"
 }
