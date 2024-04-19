@@ -15,9 +15,10 @@ Content-Type: application/json
 {
     "nombre": "William DavilaUser 20",
     "google": true,
-    "correo": "usernica20@yahoo.es",
+    "correo": "usernica200@yahoo.es",
     "password": "1234567",
-    "rol": "ADMIN_ROLE"
+    "rol": "ADMIN_ROLE",
+    "img": ":P"
 
 }
 
@@ -48,6 +49,16 @@ Content-Type: application/json
 
 
 {
-    "correo": "usernica20@yahoo.es",
+    "correo": "usernica25@yahoo.es",
     "password": "1234567"
+}
+
+
+###
+POST http://localhost:8080/api/auth/google HTTP/1.1
+Content-Type: application/json
+
+
+{
+    "id_token": "abc123"
 }
